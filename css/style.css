@@ -5,13 +5,18 @@ body {
 }
 
 .iconColors{
-  color: #46b8da;
+  color: #0068A8;
+}
+
+#map-canvas{
+  height: 500px;
 }
 
 .footerColors{
   color: #00A9DB;
 }
 
+/*
 .overlay{
     background: url(../img/new-hand.png) no-repeat;
     position: relative;
@@ -22,6 +27,7 @@ body {
     background-size: 380px;
     z-index: 10;
 }
+*/
 
 #glance{
   /*background: url(../img/light_bkg.png) repeat;*/
@@ -132,7 +138,7 @@ body {
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
-  width: 500px;
+  width: 550px;
   left: 600px;
   bottom: 30px;
   

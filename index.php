@@ -1,3 +1,8 @@
+<?php
+	require 'vendor/autoload.php';
+	use Parse\ParseClient;
+	ParseClient::initialize('amPPk1qmmyVaJDGDj0DcooxNOSf4FV1WAGF5J7OT', 'BfGwmk2OSkvDzJUo6Y0scVXeigeF2IOX1mePFBIl', 'NizBiKchYDX9gujgc3tvmFQxRzN6lbtOg4pykvME');
+?>
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
@@ -29,19 +34,19 @@
 	            <div class="navbar-collapse collapse">
 	              <ul class="nav navbar-nav navbar-right">
 	                <li><a href="#">City Pollution</a></li>
-	                <li><a href="#about"></a></li>
+	                <li><a href="#about">Who we are</a></li>
 	                <li class="dropdown">
 	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <span class="caret"></span></a>
 	                  <ul class="dropdown-menu" role="menu">
 	                    <li><a href="#">Features</a></li>
-	                    <li><a href="#">Pricing</a></li>
+	                    <li><a href="#">Purpose</a></li>
 	                    <li><a href="#">Add-ons</a></li>
 	                    <li class="divider"></li>
 	                    <li><a href="#">Support</a></li>
 	                    <li><a href="#">Blog</a></li>
 	                  </ul>
 	                </li>
-	                <li><a href="timeConnectWebLogin.html">Log-in</a></li>
+	                <li><a href="#">Log-in</a></li>
 	              </ul>
 	            </div>
 	          </div>
@@ -53,14 +58,14 @@
 	      <div class="carousel-inner">
 	        <div class="item active">
 	        	<div class="overlay"></div>
-		        <img src="img/meeting.jpg" height= "100px" alt="TimeConnect">
+		        <img src="img/Zz6LMaB.jpg" height= "100px" alt="ASB">
 	          <div class="container">
 	          	<div id = "test"></div>
 	            <div class="carousel-caption">
-	              <h1 style="background-color:rgba(75,75,75,.25); padding: 10px; border-radius: 10px">The end of manual time cards.</h1>
+	              <h1 style="background-color:rgba(75,75,75,.25); padding: 10px; border-radius: 10px">Solving the city pollution problem</h1>
 	              <br>
 	              <p><a class="btn btn-lg btn-primary" href="#" onclick="myFunction()" role="button"><i class="fa fa-play"></i> &nbsp; 2-Minute Overview</a> &nbsp; <a class="btn btn-lg btn-primary" href="#" role="button">30-Day Free Trial</a></p>
-	              <p style="background-color:rgba(75,75,75,.25); padding: 10px; border-radius: 10px; width: 400px; margin-left: 50px">See why others choose TimeConnect</p>      
+	              <p style="background-color:rgba(75,75,75,.25); padding: 10px; border-radius: 10px; width: 400px; margin-left: 50px">Donate to solve the high areas of pollution</p>      
 	            </div>
 	          </div>
 	        </div>
@@ -68,74 +73,79 @@
 	    </div>
 
 		<div class = "container marketing" style ="margin-top:-50px">
-			<h1 style="text-align:center">TimeConnect at a glance</h1>
+			<h1 style="text-align:center">ASB at a glance</h1>
 			<br>
-			<p style="text-align:center; color: #ADADAD">Check-in or out from work without any hassle. No more paper time cards. <br>TimeConnect's an automated time card system that's simple, smart, and accurate.</p>
+			<p style="text-align:center; color: #ADADAD">Find the areas of concern where city pollution is severe. <br>Donate to help fix the issue of city pollution.</p>
 		</div>
 
 		<div id = "glance" style="background-color: white;" class="jumbotron">
 			<!--<h2 class="text-center" style="background-color:white; margin: auto; width: 450px; padding: 10px; border-radius: 10px; color: black; margin-top: -15px">A three component system</h2>-->
       		<div class="container text-center">
+      			<!--
       			<img src = "img/computer.png" width = "350px" style = "margin-top: 110px">
       			<img src = "img/mobileapp.png" width = "200px" style = "margin-left: -20px; margin-right: -10px">
       			<img src = "img/scanner.png" width = "250px" style = "margin-top: 70px; margin-right: 50px;">
+      			!-->
       		</div>
     	</div>
 
-    	<div class="jumbotron" style="background-color: #44aefc; margin-top: -30px">
+    	<div class="jumbotron" style="background-color: #0068A8; margin-top: -30px">
       		<div class="container text-center">
       			</br>
-      			<img style="margin: auto" src = "img/TimeConnectWhiteLogo.png" height ="100px">
+      			<!--<img style="margin: auto" src = "img/TimeConnectWhiteLogo.png" height ="100px">-->
+      			<!--<iframe width="600" height="450" frameborder="0" style="border:0"
+					src="https://www.google.com/maps/embed/v1/place?q=Boston%2C%20MA%2C%20United%20States&key=AIzaSyA-klagRI08vJ54c1emqvfH7M0s9Gz5b_Q"></iframe>-->
+				<div id="map-canvas"></div>
       			</br>
-      			<h3 style="color: white">Innovative startup that prizes customer satisfaction</h2>
+      			<h3 style="color: white">Working together we can alleviate Boston's pollution.</h2>
       		</div>
     	</div>
 
     	<div class="jumbotron" style="background-color: white; margin-top: -30px">
       		<div class="container text-center">
-      			<h2>Popular features - Why you'll love TimeConnect.</h2>
+      			<h2>Popular features - Why you'll love ASB.</h2>
       			<br>
-      			<p style="text-align:center; color: #ADADAD">Automated software and hardware that allows you to save time and money </br>used on correcting employee time entries.</p>
+      			<p style="text-align:center; color: #ADADAD">Software and hardware that allows you to track the city's pollution </br>and pay towards fixing the severe areas.</p>
       			<br>
       			<div class="row">
         			<div class="col-md-4">
         				<div class = "iconColors"><i class="fa fa-mobile fa-2x"></i></div>
-        				<h4 style="color:#46b8da">Go mobile</h4>
-        				<p style="font-size: 14px;">TimeConnect works for mobile</br> devices.</p>
+        				<h4 style="color:#0068A8a">Go mobile</h4>
+        				<p style="font-size: 14px;">ASB works for mobile</br> devices.</p>
         				<br>
         				<div class = "iconColors"><i class="fa fa-cloud fa-2x"></i></div>
-        				<h4 style="color:#46b8da">On the cloud</h4>
-        				<p style="font-size: 14px;">All the times are stored</br> securely on the cloud.</p>
+        				<h4 style="color:#0068A8">On the cloud</h4>
+        				<p style="font-size: 14px;">All the graph informations are stored</br> securely on the cloud.</p>
         				<br>
         				<div class = "iconColors"><i class="fa fa-book fa-2x"></i></div>
-        				<h4 style="color:#46b8da">Stored in the books</h4>
-        				<p style="font-size: 14px;">Automated time entry stores</br> online for reference.</p>
+        				<h4 style="color:#0068A8">PayPal integration</h4>
+        				<p style="font-size: 14px;">ASB uses PayPal API</br> to pay towards research facilities.</p>
         			</div>
         			<div class="col-md-4">
         				<div class = "iconColors"><i class="fa fa-archive fa-2x"></i></div>
-        				<h4 style="color:#46b8da">Archived</h4>
-        				<p style="font-size: 14px;">Accurate saves of employee</br> check-in and outs.</p>
+        				<h4 style="color:#0068A8">Archived</h4>
+        				<p style="font-size: 14px;">Accurate sensors that track</br> city pollution.</p>
         				<br>
         				<div class = "iconColors"><i class="fa fa-paperclip fa-2x"></i></div>
-        				<h4 style="color:#46b8da">Organized</h4>
-        				<p style="font-size: 14px;">Data is displayed online</br> or mobile for overview.</p>
+        				<h4 style="color:#0068A8">Organized</h4>
+        				<p style="font-size: 14px;">Data is displayed on the web</br> or mobile for overview.</p>
         				<br>
         				<div class = "iconColors"><i class="fa fa-truck fa-2x"></i></div>
-        				<h4 style="color:#46b8da">Delivery</h4>
-        				<p style="font-size: 14px;">Hardware component set-up for</br> businesses of TimeConnect.</p>
+        				<h4 style="color:#0068A8">Delivery</h4>
+        				<p style="font-size: 14px;">Hardware component set-up for</br> users of ASB.</p>
         			</div>
         			<div class="col-md-4">
         				<div class = "iconColors"><i class="fa fa-keyboard-o fa-2x"></i></div>
-        				<h4 style="color:#46b8da">No more manual</h4>
-        				<p style="font-size: 14px;">Never fill out a paper</br> time card again!</p>
+        				<h4 style="color:#0068A8">Automation</h4>
+        				<p style="font-size: 14px;">Tied to your bag</br> ASB tracks the pollutions, and you do your part.</p>
         				<br>
         				<div class = "iconColors"><i class="fa fa-cog fa-2x"></i></div>
-        				<h4 style="color:#46b8da">Effectiveness</h4>
-        				<p style="font-size: 14px;">Mobile automated wi-fi and</br> geo-fencing.</p>
+        				<h4 style="color:#0068A8">Effectiveness</h4>
+        				<p style="font-size: 14px;">Hardware portability, website and</br> mobile visualization.</p>
         				<br>
         				<div class = "iconColors"><i class="fa fa-group fa-2x"></i></div>
-        				<h4 style="color:#46b8da">Pay your employees</h4>
-        				<p style="font-size: 14px;">Hours should be absolutely correct.</br> Pay your workers for their hours!</p>
+        				<h4 style="color:#0068A8">People</h4>
+        				<p style="font-size: 14px;">You can do your part to help.</br> Bring around our hardware, and track the pollution!</p>
         				</br>
         			</div>
         			<div class="text-center"><p><a class="btn btn-lg btn-info" href="#" role="button"><i class="fa fa-paper-plane"></i> &nbsp;Explore More Features</a></p></div>
@@ -143,80 +153,14 @@
       		</div>
     	</div>
 
-    	<!--
-    	<div class="jumbotron" style="background-color: #636363; margin-top: -30px">
-      		<div class="container text-center">
- 				<h2 style="color: white">Businesses love TimeConnect</h2>
- 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			      <ol class="carousel-indicators">
-			        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			        <li data-target="#myCarousel" data-slide-to="1"></li>
-			        <li data-target="#myCarousel" data-slide-to="2"></li>
-			      </ol>
-				    <div class="carousel-inner">
-				      <div class="active item">
-				      	<div class="container">
-            				<div style="background-color:rgba(75,75,75,0.7);" class="carousel-caption">
-              				
-            				</div>
-          				</div>
-				      </div>
-				      <div class="item"><p>2</p></div>
-				      <div class="item"><p>3</p></div>
-				    </div>
-					<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-					<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-				</div>
-      		</div>
-    	</div>
-    	-->
-
-    	<!--
-		<div class="container marketing">
-    		<div class = "text-center jumbotron well" id = "end">
-    		<h2>30-Day Trial</h2>	
-        </br>
-		<form class = "form-inline" name="contactform" role="form" method ="post" action = "send_form_email.php">
-		  <div class="form-group">
-		    <label for="contact-name" class="col-lg-2 control-label">Name: </label>
-		    <input type="text" class="form-control" id="contact-name" name="contact-name" placeholder="Enter Full Name" maxlength="50" size="30">
-		  </div>
-		  </br>
-		  </br>
-		  <div class="form-group">
-		    <label for="email" class="col-lg-2 control-label">Email: </label>
-		    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email" maxlength="80" size="30">
-		  </div>
-		  </br>
-		  </br>
-		  <div class="form-group">
-		    <label for="contact-sub" class="col-lg-2 control-label">Subject: </label>
-		    <input type="text" class="form-control" id="contact-sub" name="contact-sub" placeholder="Enter the Subject" maxlength="50" size="30">
-		  </div>
-		  </br>
-		  </br>
-		  <div class="form-group">
-		    <label for="contact-msg" class ="col-lg-2 control-label">Message: </label>
-		    <div class = "col-lg-10">
-		      <textarea class="form-control" id="contact-msg" rows="8" name="contact-msg" placeholder="Enter your Message" maxlength = "1000"></textarea>
-		    </div>
-		  </div>
-		  </br>
-		  </br>
-		  <button type="submit" value = "Submit" class="btn btn-primary">Submit</button>
-		</form>
-		</div>
-		</div>
-		-->
-
 		<div class="jumbotron" style="background-color: #575757; margin-top: -30px">
       		<div class="container text-center">
 				<!-- Begin MailChimp Signup Form -->
 				<div id="mc_embed_signup">
-				<form action="//amazonaws.us8.list-manage.com/subscribe/post?u=359696a4df68e08db57399404&amp;id=5f13a0800f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-					<h2 style="color: white">Subscribe to TimeConnect's newsletter!</h2>
+				<form action="//amazonaws.us8.list-manage.com/subscribe/post?u=359696a4df68e08db57399404&amp;id=d591bf2f1f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<h2 style="color: white">Subscribe to ASB's newsletter!</h2>
 					<br>
-					<p style="color: #DBD9DB; font-size: 16px">We'll keep you up to date with the<br>latest TimeConnect features and status.</p> 
+					<p style="color: #DBD9DB; font-size: 16px">We'll keep you up to date with the<br>latest ASB features and status.</p> 
 					<br>
 				<div class="jumbotron" style="width:400px; height: 300px; margin: auto; background:#46b8da;">
 				<div class="mc-field-group">
@@ -235,7 +179,7 @@
 						<div class="response" id="mce-success-response" style="display:none"></div>
 						<br><br>
 					</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-				    <div style="position: absolute; left: -5000px;"><input type="text" name="b_359696a4df68e08db57399404_5f13a0800f" tabindex="-1" value=""></div>
+				    <div style="position: absolute; left: -5000px;"><input type="text" name="b_359696a4df68e08db57399404_d591bf2f1f" tabindex="-1" value=""></div>
 				    <div class="clear"><input type="submit" value="Subscribe!" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-default"></div>
 				</form>
 				</div>
@@ -248,17 +192,17 @@
             <div class = "container">
             	<div class="row">
         			<div class="col-lg-4">
-        				<h4>Learn about TimeConnect</h4>
-        				<a class = "footerColors" href = "#">Why TimeConnect?</a><br>
+        				<h4>Learn about ASB</h4>
+        				<a class = "footerColors" href = "#">Why ASB?</a><br>
         				<a class = "footerColors" href = "#">Features</a><br>
-        				<a class = "footerColors" href = "#">Pricing</a><br>
+        				<a class = "footerColors" href = "#">Purpose</a><br>
         				<a class = "footerColors" href = "#">Case Studies</a><br>
         				<a class = "footerColors" href = "#">Add-ons</a>
         			</div>
         			<div class="col-lg-4">
         				<h4>Partner with us</h4>
-        				<a class = "footerColors" href = "#">Accountants and Bookkeepers</a><br>
-        				<a class = "footerColors" href = "#">Financial Institutions</a><br>
+        				<a class = "footerColors" href = "#">CO2</a><br>
+        				<a class = "footerColors" href = "#">Ambient Light and Noise</a><br>
         				<a class = "footerColors" href = "#">Developer Tools</a>
         			</div>
         			<div class="col-lg-4">
@@ -271,14 +215,15 @@
         			</div>
         		</div>
         		<hr class="featurette-divider">
-        		<p><a <a target="_blank" href="https://www.facebook.com/pages/TimeConnect/1532301686991646" style="color: #8F8F8F"><i class="fa fa-facebook fa-lg"></i> &nbsp;Facebook</a></p>
+        		<p><a <a target="_blank" href="#" style="color: #8F8F8F"><i class="fa fa-facebook fa-lg"></i> &nbsp;Facebook</a></p>
             	<a style="font-size: 14px" href = "#" class = "navbar-text pull-right">Terms of use</a>
-                <p style="font-size: 14px" class = "navbar-text pull-left">&copy; 2014 - TimeConnect. All rights reserved.</p>
+                <p style="font-size: 14px" class = "navbar-text pull-left">&copy; 2014 - ASB. All rights reserved.</p>
             </div>
       	</div>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src=""></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-klagRI08vJ54c1emqvfH7M0s9Gz5b_Q"></script>
+		<script src="js/d3.min.js" charset="utf-8"></script>
 		<script src="js/bootstrap.min.js"></script>
     
 	    <script>
@@ -297,6 +242,17 @@
 	        });
 	      });
 	    </script>
+	    <script type="text/javascript">
+			function initialize() {
+				var mapOptions = {
+					center: new google.maps.LatLng(42.3581, -71.0636),
+					zoom: 8
+				};
+				var map = new google.maps.Map(document.getElementById("map-canvas"),
+					mapOptions);
+			}
+     	 	google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
 	    <script>
 	      function myFunction() {
 		        var myDiv = document.getElementById("test");
@@ -310,4 +266,11 @@
 		        myDiv.appendChild(makeIframe);
 		}
 	    </script>
+	    <?php
+	use Parse\ParseObject;
+	$testObject = ParseObject::create("TestObject");
+	$testObject->set("foo", "bar");
+	$testObject->save();
+?>
+
 </html>
