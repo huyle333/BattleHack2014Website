@@ -4,6 +4,37 @@ body {
       background: transparent;
 }
 
+.iconColors{
+  color: #46b8da;
+}
+
+.footerColors{
+  color: #00A9DB;
+}
+
+.overlay{
+    background: url(../img/new-hand.png) no-repeat;
+    position: relative;
+    top: 90px;
+    left: 170px;
+    width: 100%;
+    height: 100%;
+    background-size: 380px;
+    z-index: 10;
+}
+
+#glance{
+  /*background: url(../img/light_bkg.png) repeat;*/
+  background-color: #F5F5F5;
+}
+
+#test{
+  position: relative;
+  bottom: 470px;
+  left: 150px;
+  z-index: 20;
+}
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
