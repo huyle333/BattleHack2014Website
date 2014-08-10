@@ -69,12 +69,14 @@
       				<div class="col-md-6">
 		      			<h2>Login</h2>
 		      			<br>
-		      			<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-		      			<input class="form-control" type="text" id="user" placeholder="Username"><br>
-						<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-						<input class="form-control" type="password" id="pass" placeholder="Password"><br>
-						<br>
-						<button class = "btn btn-success" onclick="loginFunction()">Login</button><br>
+		      			<form name = "loginForm" action="javascript:loginFunction()">
+			      			<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+			      			<input class="form-control" type="text" id="user" placeholder="Username"><br>
+							<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+							<input class="form-control" type="password" id="pass" placeholder="Password"><br>
+							<br>
+							<button class = "btn btn-success" type = "submit">Login</button><br>
+      					</form>
       				</div>
       				<div class="col-md-6">
 		      			<h2>First time user? - Sign up</h2>
@@ -131,11 +133,11 @@
 
 		//login checks to see if manager or employee
 		function loginFunction() {
-			Parse.User.logIn(USER, document.getElementById("pass").value, {
+			Parse.User.logIn(document.loginForm.user.value, document.loginForm.pass.value, {
 				success: function(user) {
 				  	window.location="dashboard.php";
 				},
-				error: function(error) { 
+				error: function(user, error) { 
 				  	alert("Error: Wrong Username or Password. Please refresh page and try again. " + "Error: " + error.code + " " + error.message);
 				} 
 			});

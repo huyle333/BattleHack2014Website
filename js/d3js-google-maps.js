@@ -9,11 +9,13 @@ var mapOptions = {
 var map = new google.maps.Map(document.getElementById("map-canvas"),
 mapOptions);
 
-var Temperature = Parse.Object.extend("Data");
-var query = new Parse.Query(Temperature);
-query.get("SoYcpEmEZJ", {
-  success: function(temperature) {
-  	console.log(temperature.get("Data"));
+
+/*
+var Score = Parse.Object.extend("SensorData");
+var query = new Parse.Query(Score);
+query.get("OQmWwMYWec", {
+  success: function(level) {
+  	console.log(level.get("Humidity"));
     // The object was retrieved successfully.
   },
   error: function(object, error) {
@@ -21,32 +23,38 @@ query.get("SoYcpEmEZJ", {
     // error is a Parse.Error with an error code and description.
   }
 });
+*/
 
 var temperatureMap = {};
 var humidityMap = {};
 var noiseMap = {};
 var carbonmonoxideMap = {};
 var methaneMap = {};
+
+var Score = Parse.Object.extend("SensorData");
+var query = new Parse.Query(Score);
+query.equalTo(true);
+query.find({
+  success: function(levels) {
+  	console.log(levels[0].get("Humidity"));
+  	console.log(levels[1].get("Humidity"));
+  	console.log(levels[2].get("Humidity"));
+  	for (var i = 0; i < levels.length; i++) {
+      var object = results[i];
+      alert(object.id + ' - ' + object.get('playerName'));
+    }
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+/*
 temperatureMap[0] = {
 	center: new google.maps.LatLng(42.3581, -71.0636),
 	population: 100000
 };
-
-temperatureMap[1] = {
-	center: new google.maps.LatLng(42.360200, -71.057951),
-	population: 100000
-};
-
-humidityMap[0] = {
-	center: new google.maps.LatLng(42.329124, -71.073886),
-	population: 100000
-};
-
-methaneMap[0] = {
-	center: new google.maps.LatLng(42.355801, -71.061182),
-	population: 100000
-};
-
+*/
 
 var temperatureCircle = {};
 var humidityCircle = {};

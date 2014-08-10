@@ -55,7 +55,7 @@
 	                    <li><a href="#">Blog</a></li>
 	                  </ul>
 	                </li>
-	                <li class = "active"><a href="login.php">Log-in</a></li>
+	                <li><button onclick="logOut()">Log-out</button></li>
 	              </ul>
 	            </div>
 	          </div>
@@ -108,6 +108,26 @@
 		<script src="js/bootstrap.min.js"></script>
     	<script src="js/d3js-google-maps.js"></script>
     	<script src="//cdn.embedly.com/widgets/platform.js"></script>
+
+    	<script>
+    		var currentUser = Parse.User.current();
+			if (currentUser) {
+    			// do stuff with the user
+    			console.log("success");
+			} else {
+    			// show the signup or login page
+    			console.log("breach");
+    			window.location.href = "http://www.winstonchen.org/";
+			}
+    	</script>
+
+    	<script>
+    		function logOut(){
+    			Parse.User.logOut();
+				var currentUser = Parse.User.current();
+				window.location.href = "index.php";
+    		}
+    	</script>
 
 	    <script>
 	      $("#navigation ul li a[href^='#']").on('click', function(e) {
