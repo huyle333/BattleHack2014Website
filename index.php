@@ -1,8 +1,12 @@
+<!--
 <?php
+	/*
 	require 'vendor/autoload.php';
 	use Parse\ParseClient;
 	ParseClient::initialize('amPPk1qmmyVaJDGDj0DcooxNOSf4FV1WAGF5J7OT', 'BfGwmk2OSkvDzJUo6Y0scVXeigeF2IOX1mePFBIl', 'NizBiKchYDX9gujgc3tvmFQxRzN6lbtOg4pykvME');
+	*/
 ?>
+-->
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
@@ -13,9 +17,22 @@
 		<link rel= "shortcut icon" href="img/favicon.ico">
 		<link href= "http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans:400,600" rel="stylesheet" />
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="//www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+		<script>
+			Parse.initialize("amPPk1qmmyVaJDGDj0DcooxNOSf4FV1WAGF5J7OT", "ye1aAM74mKkhLvIz81JL1tmxrGfRg37vgK02rz2t");
+		</script>
+		<script>
+			/*
+			var TestObject = Parse.Object.extend("TestObject");
+			var testObject = new TestObject();
+			testObject.save({foo: "bar"}).then(function(object) {
+  				alert("yay! it worked");
+			});
+			*/
+		</script>
 	</head>
 	<title>
-		ASB
+		Track the Planet!
 	</title>
 	<body data-spy="scroll" data-target="#navigation" id="home">
 		<div class="navbar-wrapper" style="z-index: 30">
@@ -29,6 +46,7 @@
 	                <span class="icon-bar"></span>
 	                <span class="icon-bar"></span>
 	              </button>
+	              <a class="navbar-brand" href="index.php">Track the Planet!</a>
 	              <!--<a href="#"><img src = "img/timeclock_logo_transparent.png" height = "30px" width = "206px" style= "margin-top: 12px"></a>-->
 	            </div>
 	            <div class="navbar-collapse collapse">
@@ -46,7 +64,7 @@
 	                    <li><a href="#">Blog</a></li>
 	                  </ul>
 	                </li>
-	                <li><a href="#">Log-in</a></li>
+	                <li><a href="login.php">Log-in</a></li>
 	              </ul>
 	            </div>
 	          </div>
@@ -64,7 +82,7 @@
 	            <div class="carousel-caption">
 	              <h1 style="background-color:rgba(75,75,75,.25); padding: 10px; border-radius: 10px">Solving the city pollution problem</h1>
 	              <br>
-	              <p><a class="btn btn-lg btn-primary" href="#" onclick="myFunction()" role="button"><i class="fa fa-play"></i> &nbsp; 2-Minute Overview</a> &nbsp; <a class="btn btn-lg btn-primary" href="#" role="button">30-Day Free Trial</a></p>
+	              <p><a class="btn btn-lg btn-primary" href="#" onclick="myFunction()" role="button"><i class="fa fa-play"></i> &nbsp; 2-Minute Overview</a> &nbsp; <a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
 	              <p style="background-color:rgba(75,75,75,.25); padding: 10px; border-radius: 10px; width: 400px; margin-left: 50px">Donate to solve the high areas of pollution</p>      
 	            </div>
 	          </div>
@@ -95,9 +113,26 @@
       			<!--<img style="margin: auto" src = "img/TimeConnectWhiteLogo.png" height ="100px">-->
       			<!--<iframe width="600" height="450" frameborder="0" style="border:0"
 					src="https://www.google.com/maps/embed/v1/place?q=Boston%2C%20MA%2C%20United%20States&key=AIzaSyA-klagRI08vJ54c1emqvfH7M0s9Gz5b_Q"></iframe>-->
+				<p>
+					<input type="checkbox" id="temperature">
+					<label style="color: white" for="temperature">Show Temperature </label>
+					<input type="checkbox" id="humidity">
+					<label style="color: white" for="humidity">Show Humidity </label>
+					<input type="checkbox" id="noise">
+					<label style="color: white" for="noise">Show Noise </label>
+					<input type="checkbox" id="carbonmonoxide">
+					<label style="color: white" for="carbonmonoxide">Show Carbon Monoxide </label>
+					<input type="checkbox" id="methane">
+					<label style="color: white" for="methane">Show Methane</label>
+				</p>
 				<div id="map-canvas"></div>
       			</br>
       			<h3 style="color: white">Working together we can alleviate Boston's pollution.</h2>
+      			<div id ="towhom">
+      			<script data-button="donate" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=YUYCX7QDJ8MNG" async="async">
+    			</script>
+    			</div>
+    			<br>
       		</div>
     	</div>
 
@@ -225,7 +260,9 @@
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-klagRI08vJ54c1emqvfH7M0s9Gz5b_Q"></script>
 		<script src="js/d3.min.js" charset="utf-8"></script>
 		<script src="js/bootstrap.min.js"></script>
-    
+    	<script src="js/d3js-google-maps.js"></script>
+    	<script src="//cdn.embedly.com/widgets/platform.js"></script>
+
 	    <script>
 	      $("#navigation ul li a[href^='#']").on('click', function(e) {
 	        // prevent default anchor click behavior
@@ -242,17 +279,6 @@
 	        });
 	      });
 	    </script>
-	    <script type="text/javascript">
-			function initialize() {
-				var mapOptions = {
-					center: new google.maps.LatLng(42.3581, -71.0636),
-					zoom: 8
-				};
-				var map = new google.maps.Map(document.getElementById("map-canvas"),
-					mapOptions);
-			}
-     	 	google.maps.event.addDomListener(window, 'load', initialize);
-		</script>
 	    <script>
 	      function myFunction() {
 		        var myDiv = document.getElementById("test");
@@ -266,11 +292,13 @@
 		        myDiv.appendChild(makeIframe);
 		}
 	    </script>
+	    <!--
 	    <?php
-	use Parse\ParseObject;
-	$testObject = ParseObject::create("TestObject");
-	$testObject->set("foo", "bar");
-	$testObject->save();
-?>
-
+			use Parse\ParseObject;
+			$testObject = ParseObject::create("TestObject");
+			$testObject->set("foo", "bar");
+			$testObject->save();
+		?>
+		-->
+	    </body>
 </html>
