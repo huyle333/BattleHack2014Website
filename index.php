@@ -31,7 +31,7 @@
 		</script>
 	</head>
 	<title>
-		Track the Planet!
+		Canary!
 	</title>
 	<body data-spy="scroll" data-target="#navigation" id="home">
 		<div class="navbar-wrapper" style="z-index: 30">
@@ -45,8 +45,8 @@
 	                <span class="icon-bar"></span>
 	                <span class="icon-bar"></span>
 	              </button>
-	              <a class="navbar-brand" href="index.php">Track the Planet!</a>
-	              <!--<a href="#"><img src = "img/timeclock_logo_transparent.png" height = "30px" width = "206px" style= "margin-top: 12px"></a>-->
+	              <!--<a class="navbar-brand" href="index.php">Canary!</a>-->
+	              <a href="#"><img src = "img/Canary.png" height = "30px" style= "margin-top: 12px"></a>
 	            </div>
 	            <div class="navbar-collapse collapse">
 	              <ul class="nav navbar-nav navbar-right">
@@ -75,7 +75,7 @@
 	      <div class="carousel-inner">
 	        <div class="item active">
 	        	<div class="overlay"></div>
-		        <img src="img/Zz6LMaB.jpg" height= "100px" alt="ASB">
+		        <img src="img/Zz6LMaB.jpg" height= "100px" alt="Canary">
 	          <div class="container">
 	          	<div id = "test"></div>
 	            <div class="carousel-caption">
@@ -90,7 +90,7 @@
 	    </div>
 
 		<div class = "container marketing" style ="margin-top:-50px">
-			<h1 style="text-align:center">ASB at a glance</h1>
+			<h1 style="text-align:center">Canary at a glance</h1>
 			<br>
 			<p style="text-align:center; color: #ADADAD">Find the areas of concern where city pollution is severe. <br>Donate to help fix the issue of city pollution.</p>
 		</div>
@@ -98,6 +98,7 @@
 		<div id = "glance" style="background-color: white;" class="jumbotron">
 			<!--<h2 class="text-center" style="background-color:white; margin: auto; width: 450px; padding: 10px; border-radius: 10px; color: black; margin-top: -15px">A three component system</h2>-->
       		<div class="container text-center">
+      			<img src = "img/canarybird.png" width = "100px" style = "margin: auto">
       			<!--
       			<img src = "img/computer.png" width = "350px" style = "margin-top: 110px">
       			<img src = "img/mobileapp.png" width = "200px" style = "margin-left: -20px; margin-right: -10px">
@@ -137,7 +138,7 @@
 
     	<div class="jumbotron" style="background-color: white; margin-top: -30px">
       		<div class="container text-center">
-      			<h2>Popular features - Why you'll love ASB.</h2>
+      			<h2>Popular features - Why you'll love Canary.</h2>
       			<br>
       			<p style="text-align:center; color: #ADADAD">Software and hardware that allows you to track the city's pollution </br>and pay towards fixing the severe areas.</p>
       			<br>
@@ -145,7 +146,7 @@
         			<div class="col-md-4">
         				<div class = "iconColors"><i class="fa fa-mobile fa-2x"></i></div>
         				<h4 style="color:#0068A8a">Go mobile</h4>
-        				<p style="font-size: 14px;">ASB works for mobile</br> devices.</p>
+        				<p style="font-size: 14px;">Canary works for mobile</br> devices.</p>
         				<br>
         				<div class = "iconColors"><i class="fa fa-cloud fa-2x"></i></div>
         				<h4 style="color:#0068A8">On the cloud</h4>
@@ -153,7 +154,7 @@
         				<br>
         				<div class = "iconColors"><i class="fa fa-book fa-2x"></i></div>
         				<h4 style="color:#0068A8">PayPal integration</h4>
-        				<p style="font-size: 14px;">ASB uses PayPal API</br> to pay towards research facilities.</p>
+        				<p style="font-size: 14px;">Canary uses PayPal API</br> to pay towards research facilities.</p>
         			</div>
         			<div class="col-md-4">
         				<div class = "iconColors"><i class="fa fa-archive fa-2x"></i></div>
@@ -166,12 +167,12 @@
         				<br>
         				<div class = "iconColors"><i class="fa fa-truck fa-2x"></i></div>
         				<h4 style="color:#0068A8">Delivery</h4>
-        				<p style="font-size: 14px;">Hardware component set-up for</br> users of ASB.</p>
+        				<p style="font-size: 14px;">Hardware component set-up for</br> users of Canary.</p>
         			</div>
         			<div class="col-md-4">
         				<div class = "iconColors"><i class="fa fa-keyboard-o fa-2x"></i></div>
         				<h4 style="color:#0068A8">Automation</h4>
-        				<p style="font-size: 14px;">Tied to your bag</br> ASB tracks the pollutions, and you do your part.</p>
+        				<p style="font-size: 14px;">Tied to your bag</br> Canary tracks the pollutions, and you do your part.</p>
         				<br>
         				<div class = "iconColors"><i class="fa fa-cog fa-2x"></i></div>
         				<h4 style="color:#0068A8">Effectiveness</h4>
@@ -192,9 +193,9 @@
 				<!-- Begin MailChimp Signup Form -->
 				<div id="mc_embed_signup">
 				<form action="//amazonaws.us8.list-manage.com/subscribe/post?u=359696a4df68e08db57399404&amp;id=d591bf2f1f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-					<h2 style="color: white">Subscribe to ASB's newsletter!</h2>
+					<h2 style="color: white">Subscribe to Canary's newsletter!</h2>
 					<br>
-					<p style="color: #DBD9DB; font-size: 16px">We'll keep you up to date with the<br>latest ASB features and status.</p> 
+					<p style="color: #DBD9DB; font-size: 16px">We'll keep you up to date with the<br>latest Canary features and status.</p> 
 					<br>
 				<div class="jumbotron" style="width:400px; height: 300px; margin: auto; background:#46b8da;">
 				<div class="mc-field-group">
@@ -226,8 +227,8 @@
             <div class = "container">
             	<div class="row">
         			<div class="col-lg-4">
-        				<h4>Learn about ASB</h4>
-        				<a class = "footerColors" href = "#">Why ASB?</a><br>
+        				<h4>Learn about Canary</h4>
+        				<a class = "footerColors" href = "#">Why Canary?</a><br>
         				<a class = "footerColors" href = "#">Features</a><br>
         				<a class = "footerColors" href = "#">Purpose</a><br>
         				<a class = "footerColors" href = "#">Case Studies</a><br>
@@ -251,7 +252,7 @@
         		<hr class="featurette-divider">
         		<p><a <a target="_blank" href="#" style="color: #8F8F8F"><i class="fa fa-facebook fa-lg"></i> &nbsp;Facebook</a></p>
             	<a style="font-size: 14px" href = "#" class = "navbar-text pull-right">Terms of use</a>
-                <p style="font-size: 14px" class = "navbar-text pull-left">&copy; 2014 - ASB. All rights reserved.</p>
+                <p style="font-size: 14px" class = "navbar-text pull-left">&copy; 2014 - Canary. All rights reserved.</p>
             </div>
       	</div>
 
@@ -282,7 +283,7 @@
 	      function myFunction() {
 		        var myDiv = document.getElementById("test");
 		        var makeIframe = document.createElement("iframe");
-		        makeIframe.setAttribute("src", "//www.youtube.com/embed/3S86okk405E?rel=0&showinfo=0&autoplay=1");
+		        makeIframe.setAttribute("src", "#");
 		        makeIframe.setAttribute('frameborder', "0");
 		        makeIframe.style.width = "100%";
 		        makeIframe.style.height = "100%";

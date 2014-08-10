@@ -36,12 +36,30 @@ var query = new Parse.Query(Score);
 query.equalTo(true);
 query.find({
   success: function(levels) {
-  	console.log(levels[0].get("Humidity"));
-  	console.log(levels[1].get("Humidity"));
-  	console.log(levels[2].get("Humidity"));
   	for (var i = 0; i < levels.length; i++) {
-      var object = results[i];
-      alert(object.id + ' - ' + object.get('playerName'));
+      temperatureMap[i] = {
+      	center: new google.maps.LatLng(levels[i].get("Latitude"), levels[i].get("Longitude")),
+      	population: levels[i].get("Temperature")
+      };
+    }
+    for (var i = 0; i < levels.length; i++) {
+      humidityMap[i] = {
+      	center: new google.maps.LatLng(levels[i].get("Latitude"), levels[i].get("Longitude")),
+      	population: levels[i].get("Humidity")
+      };
+    }
+    for (var i = 0; i < levels.length; i++) {
+      noiseMap[i] = {
+      	center: new google.maps.LatLng(levels[i].get("Latitude"), levels[i].get("Longitude")),
+      	// population: levels[i].get("NoiseLevel")
+      	population: 100
+      };
+    }
+    for (var i = 0; i < levels.length; i++) {
+      methaneMap[i] = {
+      	center: new google.maps.LatLng(levels[i].get("Latitude"), levels[i].get("Longitude")),
+      	population: levels[i].get("Methane")
+      };
     }
   },
   error: function(error) {
@@ -199,22 +217,32 @@ function clearHumidityOverlays(){
 
 function showNoiseOverlays(){
 	if(noiseMap){
-	    for (var i = 0; i < Object.size(noiseMap); i++) {
+	    query.equalTo(true);
+		query.find({
+  		success: function(levels) {
+  			for (var i = 0; i < levels.length; i++) {
+  			console.log((1-((-(levels[i].get("NoiseLevel")))/10)));
 		    var populationOptions = {
-		    strokeColor: getColor(1/20),
+		    strokeColor: getColor(1-((-(levels[i].get("NoiseLevel")))/10)),
 		    strokeOpacity: 0.8,
 		    strokeWeight: 2,
 		    //fillColor: '#FF0000',
-		    fillColor: getColor(1/20),
+		    fillColor: getColor(1-((-(levels[i].get("NoiseLevel")))/10)),
 		    fillOpacity: 0.35,
 		    map: map,
 		    center: noiseMap[i].center,
-		    radius: Math.sqrt(noiseMap[i].population) * 5
-		};
-		// Add the circle for this city to the map.
-		noiseCircle[i] = new google.maps.Circle(populationOptions);
-		}
-    }
+		    //radius: Math.sqrt(noiseMap[i].population) * 5
+		    radius: Math.sqrt(100)
+		    };
+			// Add the circle for this city to the map.
+			noiseCircle[i] = new google.maps.Circle(populationOptions);
+			}
+		},
+ 		 error: function(error) {
+    		alert("Error: " + error.code + " " + error.message);
+  		}
+	});
+	}
 }
 
 function clearNoiseOverlays(){

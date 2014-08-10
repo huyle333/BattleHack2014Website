@@ -23,7 +23,7 @@
 		</script>
 	</head>
 	<title>
-		Track the Planet!
+		Canary!
 	</title>
 	<body data-spy="scroll" data-target="#navigation" id="home">
 		<div class="navbar-wrapper" style="z-index: 30">
@@ -37,8 +37,8 @@
 	                <span class="icon-bar"></span>
 	                <span class="icon-bar"></span>
 	              </button>
-	              <a class="navbar-brand" href="index.php">Track the Planet!</a>
-	              <!--<a href="#"><img src = "img/timeclock_logo_transparent.png" height = "30px" width = "206px" style= "margin-top: 12px"></a>-->
+	              <!--<a class="navbar-brand" href="index.php">Canary!</a>-->
+	              <a href="index.php"><img src = "img/Canary.png" height = "30px" style= "margin-top: 12px"></a>
 	            </div>
 	            <div class="navbar-collapse collapse">
 	              <ul class="nav navbar-nav navbar-right">
@@ -96,8 +96,8 @@
             <div class = "container">
             	<div class="row">
         			<div class="col-lg-4">
-        				<h4>Learn about ASB</h4>
-        				<a class = "footerColors" href = "#">Why ASB?</a><br>
+        				<h4>Learn about Canary</h4>
+        				<a class = "footerColors" href = "#">Why Canary?</a><br>
         				<a class = "footerColors" href = "#">Features</a><br>
         				<a class = "footerColors" href = "#">Purpose</a><br>
         				<a class = "footerColors" href = "#">Case Studies</a><br>
@@ -121,7 +121,7 @@
         		<hr class="featurette-divider">
         		<p><a <a target="_blank" href="#" style="color: #8F8F8F"><i class="fa fa-facebook fa-lg"></i> &nbsp;Facebook</a></p>
             	<a style="font-size: 14px" href = "#" class = "navbar-text pull-right">Terms of use</a>
-                <p style="font-size: 14px" class = "navbar-text pull-left">&copy; 2014 - ASB. All rights reserved.</p>
+                <p style="font-size: 14px" class = "navbar-text pull-left">&copy; 2014 - Canary. All rights reserved.</p>
             </div>
       	</div>
 
